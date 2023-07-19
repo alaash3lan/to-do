@@ -83,3 +83,16 @@ export const deleteTodo = async (req: Request, res: Response) => {
     res.status(500).json({ message: "Internal server error" });
   }
 };
+
+export const getAllTodos = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  try {
+    const user = await User.findOne();
+    if (user !== null) {
+      const todo = await Todo.find({ user: user._id });
+      res.json({ todos: todo });
+    }
+  } catch (err) {
+    res.status(401).json({ error: "Unauthorized." });
+  }
+};

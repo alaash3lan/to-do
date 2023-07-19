@@ -15,8 +15,8 @@ mongoose
     console.error(err);
   });
 
-  app.use(bodyParser.json());
-  app.use("/api/todos", todoRoutes);
+app.use(bodyParser.json());
+app.use("/api/todos", todoRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
