@@ -22,7 +22,7 @@ npx tsc --watch
 npx nodemon dist/app.js
 ```
 
-The app will be running on port 3000. You can access it in postman at http://localhost:4000.
+The app will be running on port 3000. You can access it in postman at http://localhost:5000.
 
 ## Features
 
